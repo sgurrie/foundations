@@ -6,3 +6,9 @@ p {
   color: white;
   text-align: center;
 }
+/* class */
+.larger-text {
+  font-size: 32px;
+}
+
+/* color, background-color, font-size, text-decoration, height, width */
