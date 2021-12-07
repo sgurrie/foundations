@@ -35,10 +35,10 @@ function longest (stringA, stringB) {
   lenA = stringA.length;
   lenB = stringB.length;
   if (lenA > lenB) {
-    console.log(`${stringA}` + " is longer than " + `${stringB}`);
+    console.log(`${stringA}` + " is longer than " + `${stringB}` + ".");
     return;
   } else if (lenB > lenA) {
-    console.log(`${stringB}` + " is longer than " + `${stringA}`);
+    console.log(`${stringB}` + " is longer than " + `${stringA}` + ".");
     return;
   } else {
     console.log("Both strings, " + `${stringA}` + " and " + `${stringB}` + ", are the same length.");
@@ -46,9 +46,9 @@ function longest (stringA, stringB) {
   }
 }
 
-longest("function", "method");
-longest("parameter", "argument");
-longest("push", "pull");
+longest("Function", "Method");
+longest("Parameter", "Argument");
+longest("Push", "Pull");
 
 // Exercise 4
 // Write a function called isVowel that takes a character (i.e. a string of
@@ -56,7 +56,12 @@ longest("push", "pull");
 // function should return false if the character is not a vowel.
 
 function isVowel (letter) {
-  return ['a', 'e', 'i', 'o', 'u'].indexOf(letter.toLowerCase()) !== -1;
+  var results = ['a', 'e', 'i', 'o', 'u'].indexOf(letter.toLowerCase()) !== -1;
+  if (results === true) {
+    return "The letter " + `${letter}` + " is a vowel.";
+  } else {
+    return "The letter " + `${letter}` + " is not a vowel.";
+  }
 }
 
 console.log(isVowel('a'));
