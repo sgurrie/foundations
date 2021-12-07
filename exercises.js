@@ -22,8 +22,10 @@ console.log(yell("fun "));
 // Write a function called yell10 that uses your yell function to log out an
 // uppercase version of a string 10 times.
 function yell10 (stringB) {
-  for(i = 0; i < 10; i++) {
-    console.log(yell(stringB));
+  var results;
+  for(var i = 0; i < 10; i++) {
+    results = yell(stringB) + " - run " + (i + 1);
+    console.log(results);
   }
 }
  yell10("upward ");
@@ -56,11 +58,15 @@ longest("Push", "Pull");
 // function should return false if the character is not a vowel.
 
 function isVowel (letter) {
-  var results = ['a', 'e', 'i', 'o', 'u'].indexOf(letter.toLowerCase()) !== -1;
+  newLetter = letter.toUpperCase();
+  var results = ['A', 'E', 'I', 'O', 'U'].indexOf(newLetter) !== -1;
+  if (newLetter === 'Y') {
+    return "The letter " + `${newLetter}` + " is sometimes a vowel."
+  }
   if (results === true) {
-    return "The letter " + `${letter}` + " is a vowel.";
+    return "The letter " + `${newLetter}` + " is a vowel.";
   } else {
-    return "The letter " + `${letter}` + " is not a vowel.";
+    return "The letter " + `${newLetter}` + " is not a vowel.";
   }
 }
 
@@ -68,3 +74,4 @@ console.log(isVowel('a'));
 console.log(isVowel('b'));
 console.log(isVowel('E'));
 console.log(isVowel('H'));
+console.log(isVowel('y'));
